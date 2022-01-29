@@ -10,6 +10,10 @@ To start your Phoenix server:
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
+## Tasks
+
+* Make a preview of whats possible to make users to sign up to use the product :O crazy stuff
+
 ## Ideas
 
 * Use Leaflet for maps
