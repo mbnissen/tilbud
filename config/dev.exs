@@ -48,6 +48,7 @@ config :tilbud, TilbudWeb.Endpoint,
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"lib/tilbud_web/(live|views)/.*(ex)$",
+      ~r"lib/tilbud_web/components/.*(eex)$",
       ~r"lib/tilbud_web/templates/.*(eex)$"
     ]
   ]

@@ -17,13 +17,8 @@ defmodule TilbudWeb.Router do
   scope "/", TilbudWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    live "/", IndexLive, :home
   end
-
-  # Other scopes may use custom stacks.
-  # scope "/api", TilbudWeb do
-  #   pipe_through :api
-  # end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development
   if Application.compile_env(:tilbud, :dev_routes) do
