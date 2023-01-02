@@ -18,6 +18,10 @@ defmodule TilbudWeb.IndexLive do
     |> Timex.format!("{D}/{M} {YYYY}")
   end
 
+  def format_amount(amount, currency) do 
+    Reel.Cldr.Number.to_string!(amount, currency: currency)
+  end
+
   @impl true
   def render(assigns) do
     ~H"""
@@ -28,12 +32,12 @@ defmodule TilbudWeb.IndexLive do
             <h1 class="text-lg"><%= offer.heading %></h1>
             <div><img class="h-12 max-width-12" src={offer.branding.logo} /></div>
           </div>
-          <p class="text-slate-700 text-sm"><%= offer.description %></p>
+          <p class="text-slate-700"><%= offer.description %></p>
           <div class="flex justify-between pt-4">
-            <div class="text-sm text-slate-500">
+            <div class="text-slate-500">
               <%= format_time(offer.from) %> - <%= format_time(offer.to) %>
             </div>
-            <div class="text-slate-600 font-bold"><%= offer.price %> kr.</div>
+            <div class="text-slate-600 font-bold"><%= format_amount(offer.price, offer.currency) %></div>
           </div>
         </div>
       <% end %>

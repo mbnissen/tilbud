@@ -49,7 +49,8 @@ defmodule Tilbud.MixProject do
       {:plug_cowboy, "~> 2.5"},
       {:httpoison, "~> 1.8"},
       {:poison, "~> 5.0"},
-      {:timex, "~> 3.7"}
+      {:timex, "~> 3.7"},
+      {:ex_cldr_numbers, "~> 2.28"}
     ]
   end
 
