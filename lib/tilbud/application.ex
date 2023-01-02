@@ -15,8 +15,10 @@ defmodule Tilbud.Application do
       # Start Finch
       {Finch, name: Tilbud.Finch},
       # Start the Endpoint (http/https)
-      TilbudWeb.Endpoint
+      TilbudWeb.Endpoint,
       # Start a worker by calling: Tilbud.Worker.start_link(arg)
+      # {Tilbud.TilbudServer, "frilandsæg"},
+      {Tilbud.TilbudServer, "kaffebønner"}
       # {Tilbud.Worker, arg}
     ]
 
