@@ -12,15 +12,8 @@ defmodule TilbudWeb.IndexLive do
     assign(socket, :offers, Offers.list_offers(:eggs))
   end
 
-  def format_time(%DateTime{} = datetime) do
-    datetime
-    |> Timex.to_datetime("Europe/Copenhagen")
-    |> Timex.format!("{D}/{M} {YYYY}")
-  end
-
-  def format_amount(amount, currency) do 
-    Reel.Cldr.Number.to_string!(amount, currency: currency)
-  end
+  def format_time(%DateTime{} = datetime), do: Tilbud.Cldr.Date.to_string!(datetime)
+  def format_amount(amount, currency), do: Tilbud.Cldr.Number.to_string!(amount, currency: currency)
 
   @impl true
   def render(assigns) do

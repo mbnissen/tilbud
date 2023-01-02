@@ -50,7 +50,8 @@ defmodule Tilbud.MixProject do
       {:httpoison, "~> 1.8"},
       {:poison, "~> 5.0"},
       {:timex, "~> 3.7"},
-      {:ex_cldr_numbers, "~> 2.28"}
+      {:ex_cldr_numbers, "~> 2.28"},
+      {:ex_cldr_dates_times, "~> 2.13"}
     ]
   end
 
